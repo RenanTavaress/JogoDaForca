@@ -27,22 +27,18 @@ end
 
 def verificaSeAcertou(chute, numeroSecreto)
      
-    # Condicional
-     if chute == numeroSecreto
-        puts "Acertou!"
-        return true
+    if chute == numeroSecreto
+      puts "Acertou!"
+      return true
+    end
+            
+     if numeroSecreto > chute
+        puts "O numero secreto é maior!"
+
     else 
-        
-        if numeroSecreto > chute
-            puts "O numero secreto é maior!"
-            return false
-
-        else 
-            puts "O numero secreto é menor!"   
-            return false 
-        end
-
-    end    
+        puts "O numero secreto é menor!"        
+    end
+        false 
 end
 
 boasVindas
