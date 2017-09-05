@@ -17,9 +17,9 @@ def sorteiaNumeroSecreto
     sorteado
 end
 
-def pedeUmNumero(tentativa, tentativaNumeroSecreto)
+def pedeUmNumero(tentativa, limiteDeTentativas)
     puts"\n\n\n\n"
-    puts "Tentativa " + tentativa.to_s + " de " + tentativaNumeroSecreto.to_s   
+    puts "Tentativa " + tentativa.to_s + " de " + limiteDeTentativas.to_s   
     chute = gets 
     puts "sera que acertou? voce chutou " + chute
     chute.to_i
@@ -46,11 +46,11 @@ boasVindas
 numeroSecreto = sorteiaNumeroSecreto
 
 
-tentativaNumeroSecreto = 5
+limiteDeTentativas = 5
 
-for tentativa in 1..tentativaNumeroSecreto
+for tentativa in 1..limiteDeTentativas
 
-   chute = pedeUmNumero(tentativa, tentativaNumeroSecreto)
+   chute = pedeUmNumero(tentativa, limiteDeTentativas)
 
     if verificaSeAcertou(chute, numeroSecreto)
         break
