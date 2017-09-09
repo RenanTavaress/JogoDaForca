@@ -21,6 +21,7 @@ def pedeUmNumero(chutes ,tentativa, limiteDeTentativas)
     puts"\n\n\n\n"
     puts "Tentativa " + tentativa.to_s + " de " + limiteDeTentativas.to_s   
     puts "Seus ultimos chutes: " + chutes.to_s
+    puts "Entre com o numero"
     chute = gets 
     puts "sera que acertou? voce chutou " + chute
     chute.to_i
