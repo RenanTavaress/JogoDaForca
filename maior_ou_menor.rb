@@ -51,7 +51,7 @@ for tentativa in 1..limiteDeTentativas
 
    chute = pedeUmNumero(chutes ,tentativa, limiteDeTentativas)
    chutes << chute
-   pontosAperder = (chute - numeroSecreto) / 2.0
+   pontosAperder = (chute - numeroSecreto).abs / 2.0
    pontosAteAgora -= pontosAperder
 
     if verificaSeAcertou(chute, numeroSecreto)
