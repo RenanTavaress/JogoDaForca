@@ -8,7 +8,7 @@ end
 
 def sorteiaNumeroSecreto
     puts "Escolhendo um numero secreto entre 0 a 200..."
-    sorteado = 175
+    sorteado = rand(200)
     puts "Escolhido... que tal advinhar hoje nosso numero secreto?"
     sorteado
 end
