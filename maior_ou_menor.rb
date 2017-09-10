@@ -44,15 +44,15 @@ boasVindas
 numeroSecreto = sorteiaNumeroSecreto
 
 limiteDeTentativas = 5
-
+pontosAteAgora = 1000
 chutes = []
-
 
 for tentativa in 1..limiteDeTentativas
 
    chute = pedeUmNumero(chutes ,tentativa, limiteDeTentativas)
    chutes << chute
-   
+   pontosAperder = (chute - numeroSecreto) / 2
+   pontosAteAgora -= pontosAperder
 
     if verificaSeAcertou(chute, numeroSecreto)
         break
