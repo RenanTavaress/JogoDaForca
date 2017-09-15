@@ -11,9 +11,21 @@ def pedeDificuldade
     dificuldade = gets.to_i
 end
 
-def sorteiaNumeroSecreto
-    puts "Escolhendo um numero secreto entre 0 a 200..."
-    sorteado = rand(200)
+def sorteiaNumeroSecreto(dificuldade)
+    case dificuldade
+    when 1
+        maximo = 30
+    when 2
+        maximo = 60
+    when 3
+        maximo = 100
+    when 4
+        maximo = 150
+    else
+        maximo = 200
+    end
+    puts "Escolhendo um numero secreto entre 0 e " + (maximo.to_s) + "..."
+    sorteado = rand(maximo -1)
     puts "Escolhido... que tal advinhar hoje nosso numero secreto?"
     sorteado
 end
@@ -46,7 +58,9 @@ end
 
 boasVindas
 
-numeroSecreto = sorteiaNumeroSecreto
+dificuldade = pedeDificuldade
+
+numeroSecreto = sorteiaNumeroSecreto dificuldade
 
 limiteDeTentativas = 5
 pontosAteAgora = 1000
