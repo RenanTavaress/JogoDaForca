@@ -7,7 +7,9 @@ def boasVindas
 end
 
 def pedeDificuldade
-    puts "Qual o nivel de dificuldade que deseja? (1 Fácil, 5 Difícil)"
+    puts "Qual o nivel de dificuldade que deseja?"
+    puts "(1) Muito Fácil (2) Fácil (3) Normal (4) Difícil (5) Impossivel"
+    puts "Escolha: "
     dificuldade = gets.to_i
 end
 
