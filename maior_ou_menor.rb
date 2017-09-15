@@ -24,8 +24,9 @@ def sorteiaNumeroSecreto(dificuldade)
     else
         maximo = 200
     end
-    puts "Escolhendo um numero secreto entre 0 e " + (maximo.to_s) + "..."
-    sorteado = rand(maximo -1)
+
+    puts "Escolhendo um numero secreto entre 1 e " + (maximo.to_s) + "..."
+    sorteado = rand(maximo ) + 1
     puts "Escolhido... que tal advinhar hoje nosso numero secreto?"
     sorteado
 end
