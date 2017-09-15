@@ -6,6 +6,11 @@ def boasVindas
     puts "Começaremos o jogo pra você, " + nome
 end
 
+def pedeDificuldade
+    puts "Qual o nivel de dificuldade que deseja? (1 Fácil, 5 Difícil)"
+    dificuldade = gets.to_i
+end
+
 def sorteiaNumeroSecreto
     puts "Escolhendo um numero secreto entre 0 a 200..."
     sorteado = rand(200)
