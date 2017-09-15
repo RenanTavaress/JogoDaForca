@@ -82,9 +82,19 @@ def joga(dificuldade)
     puts "Você ganhou " + pontosAteAgora.to_s + " pontos"
 end
 
+def querJogar
+    puts "Deseja Jogar Novamente (S/N)"
+    queroJogar = gets.strip
+    queroJogar.upcase == "S"
+end
+
 boasVindas
 
 dificuldade = pedeDificuldade
 
-joga(dificuldade)
-
+loop do
+    joga(dificuldade)
+    if !querJogar
+        break
+    end
+end
