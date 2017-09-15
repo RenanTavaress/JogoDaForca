@@ -57,28 +57,34 @@ def verificaSeAcertou(chute, numeroSecreto)
         false 
 end
 
+def joga(dificuldade)
+
+    numeroSecreto = sorteiaNumeroSecreto(dificuldade)
+    
+    limiteDeTentativas = 5
+    pontosAteAgora = 1000
+    chutes = []
+    
+    for tentativa in 1..limiteDeTentativas
+    
+       chute = pedeUmNumero(chutes ,tentativa, limiteDeTentativas)
+       chutes << chute
+       pontosAperder = (chute - numeroSecreto).abs / 2.0
+       pontosAteAgora -= pontosAperder
+    
+        if verificaSeAcertou(chute, numeroSecreto)
+            break
+        end
+    
+       
+    end
+    
+    puts "Você ganhou " + pontosAteAgora.to_s + " pontos"
+end
+
 boasVindas
 
 dificuldade = pedeDificuldade
 
-numeroSecreto = sorteiaNumeroSecreto dificuldade
+joga(dificuldade)
 
-limiteDeTentativas = 5
-pontosAteAgora = 1000
-chutes = []
-
-for tentativa in 1..limiteDeTentativas
-
-   chute = pedeUmNumero(chutes ,tentativa, limiteDeTentativas)
-   chutes << chute
-   pontosAperder = (chute - numeroSecreto).abs / 2.0
-   pontosAteAgora -= pontosAperder
-
-    if verificaSeAcertou(chute, numeroSecreto)
-        break
-    end
-
-   
-end
-
-puts "Você ganhou " + pontosAteAgora.to_s + " pontos"
