@@ -34,8 +34,14 @@ def joga
 
     erros = 0
     chutes = []
-
     pontosAteAgora = 0
+
+    while erros <5
+        chute = pedeUmChute(erros,chutes)
+        chutes << chute
+    end
+
+    puts "Você ganhou " + pontosAteAgora.to_s + " pontos."
 end
 
 nome = daBoasVidas
