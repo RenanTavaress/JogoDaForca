@@ -14,64 +14,58 @@ def escolhePalavraSecreta
     palavraSecreta.to_s
 end
 
-def naoQuerJogar?
+def naoQuerJogar
     puts "Deseja Jogar Novamente? (S/N)"
     queroJogar = gets.strip
     naoQueroJogar = queroJogar.upcase == "N"
 end
 
-def pedeUmChute(erros, chutes)
+def pedeUmChute(chutes, erros)
     puts "\n\n\n\n\n"
     puts "Erros até agora " + erros.to_s
     puts "Chutes ate Agora " + chutes.to_s
     puts "Entre com seu chute"
-    chute.upcase = gets.strip
+    chute = gets.strip
     puts "Sera se você acertou? você chutou " + chute.to_s
     chute.to_s
 end
+
 def joga(nome)
-    palavraSecreta = sorteiaPalavraSecreta
+    palavraSecreta = escolhePalavraSecreta
 
     erros = 0
     chutes = []
     pontosAteAgora = 0
-    totalEncontrado = 0
-
+    
     while erros < 5
-        chute = pedeUmChute(erros,chutes)
-        chutes << chute
+        chute = pedeUmChute(chutes,erros)  
+        if chutes.include? chute
+            puts "Você ja chutou " + chute.to_s
+            next
+        end
+        chutes << chute 
 
-        for i 0..in (palavraSecreta.size -1)
-            letra = palavraSecreta[i]
-            if chute == letra
-                puts "Você Acertou!"
-                totalEncontrado += 1
-            end
+        if chute.size == 1
+            totalEncontrado = palavraSecreta.count(chute[0])
             if totalEncontrado == 0
                 puts "Nao encontrei nada!"
-                erro += 1
+                erros += 1
             else
                 puts "Letra Encontrada " + totalEncontrado.to_s + "vezes"
             end
-    
-            acertou = chute.size == 1
-        if acertou
-        else
+        else 
             if chute == palavraSecreta
-                puts "Parabens! você acertou!"
-                pontosAteAgora += 100
-                break
+               puts "Parabens! você acertou!"
+               pontosAteAgora += 100
+               break
             else
-                puts "Que pena... Errou!"
-                pontosAteAgora -=30
-                erros += 1
+             puts "Que pena... Errou!"
+             pontosAteAgora -=30
+             erros += 1
             end
-        end
-    end
-
-    
-
-    puts "Você ganhou " + pontosAteAgora.to_s + " pontos."
+        end  
+    end       
+      puts "Você ganhou " + pontosAteAgora.to_s + " pontos."
 end
 
 nome = daBoasVidas
@@ -80,5 +74,5 @@ loop do
     joga(nome) 
     if naoQuerJogar
         break
-    end
-end
+    end 
+end        
