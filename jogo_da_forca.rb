@@ -1,4 +1,4 @@
-
+require_relative 'ui'
 
 def joga(nome)
     palavraSecreta = escolhePalavraSecreta
@@ -38,11 +38,13 @@ def joga(nome)
       voceGanhou(pontosAteAgora)
 end
 
-nome = daBoasVidas
+def jogoDaForca
+    nome = daBoasVidas
 
-loop do
-    joga(nome) 
-    if naoQuerJogar
-        break
+    loop do
+        joga(nome) 
+        if naoQuerJogar
+            break
+        end 
     end 
-end        
+end
