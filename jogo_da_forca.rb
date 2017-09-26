@@ -51,7 +51,7 @@ def joga(nome)
                 puts "Nao encontrei nada!"
                 erros += 1
             else
-                puts "Letra Encontrada " + totalEncontrado.to_s + "vezes"
+                puts "Letra Encontrada " + totalEncontrado.to_s + " vezes"
             end
         else 
             if chute == palavraSecreta
