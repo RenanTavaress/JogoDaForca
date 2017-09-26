@@ -1,3 +1,27 @@
+def chuteEfetuado(chute)
+    puts "Você ja chutou " + chute.to_s
+end
+
+def letraNaoEncontrada
+    puts "Nao encontrei nada!"
+end
+
+def letraEncontrada(totalEncontrado)
+    puts "Letra Encontrada " + totalEncontrado.to_s + " vezes"
+end
+
+def acetou_a_palvra
+    puts "Parabens! você acertou!"
+end
+
+def errou_a_palavra
+    puts "Que pena... Errou!"
+end
+
+def voceGanhou(pontosAteAgora)
+    puts "Você ganhou " + pontosAteAgora.to_s + " pontos."
+end
+
 def daBoasVidas
     puts "Bem vindo ao jogo da forca"
     puts "Qual é seu nome? "
