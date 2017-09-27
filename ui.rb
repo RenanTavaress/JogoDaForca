@@ -10,7 +10,7 @@ def letraEncontrada(totalEncontrado)
     puts "Letra Encontrada " + totalEncontrado.to_s + " vezes"
 end
 
-def acetou_a_palvra
+def acertou_a_palavra
     puts "Parabens! você acertou!"
 end
 
@@ -44,12 +44,16 @@ def naoQuerJogar
     naoQueroJogar = queroJogar.upcase == "N"
 end
 
-def pedeUmChute(chutes, erros)
+def cabecalhoDeTentativas(chutes, erros, mascara)
     puts "\n\n\n\n\n"
+    puts "A palavra Secreta é: " + mascara.to_s
     puts "Erros até agora " + erros.to_s
     puts "Chutes ate Agora " + chutes.to_s
+end
+
+def pedeUmChute
     puts "Entre com seu chute"
-    chute = gets.strip
+    chute = gets.strip.downcase
     puts "Sera se você acertou? você chutou " + chute.to_s
     chute.to_s
 end
