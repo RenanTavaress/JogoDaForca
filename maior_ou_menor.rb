@@ -3,7 +3,7 @@ def boasVindas
     puts "Qual é seu nome?"
     nome = gets.strip
     puts "\n\n\n\n"
-    puts "Começaremos o jogo pra você, " + nome
+    puts "Começaremos o jogo pra você, #{nome}"
 end
 
 def pedeDificuldade
@@ -27,7 +27,7 @@ def sorteiaNumeroSecreto(dificuldade)
         maximo = 200
     end
 
-    puts "Escolhendo um numero secreto entre 1 e " + (maximo.to_s) + "..."
+    puts "Escolhendo um numero secreto entre 1 e #{maximo} ..."
     sorteado = rand(maximo ) + 1
     puts "Escolhido... que tal advinhar hoje nosso numero secreto?"
     sorteado
@@ -35,11 +35,11 @@ end
 
 def pedeUmNumero(chutes ,tentativa, limiteDeTentativas)
     puts"\n\n\n\n"
-    puts "Tentativa " + tentativa.to_s + " de " + limiteDeTentativas.to_s   
-    puts "Seus ultimos chutes: " + chutes.to_s
+    puts "Tentativa #{tentativa} de #{limiteDeTentativas}"
+    puts "Seus ultimos chutes: #{chutes}"
     puts "Entre com o numero"
     chute = gets.strip
-    puts "sera que acertou? voce chutou " + chute
+    puts "sera que acertou? voce chutou #{chute}"
     chute.to_i
 end
 

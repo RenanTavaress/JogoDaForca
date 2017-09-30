@@ -1,5 +1,5 @@
 def chuteEfetuado(chute)
-    puts "Você ja chutou " + chute.to_s
+    puts "Você ja chutou #{chute}" 
 end
 
 def letraNaoEncontrada
@@ -7,7 +7,7 @@ def letraNaoEncontrada
 end
 
 def letraEncontrada(totalEncontrado)
-    puts "Letra Encontrada " + totalEncontrado.to_s + " vezes"
+    puts "Letra Encontrada #{totalEncontrado} vezes"
 end
 
 def acertou_a_palavra
@@ -19,7 +19,7 @@ def errou_a_palavra
 end
 
 def voceGanhou(pontosAteAgora)
-    puts "Você ganhou " + pontosAteAgora.to_s + " pontos."
+    puts "Você ganhou #{pontosAteAgora} pontos."
 end
 
 def daBoasVidas
@@ -27,14 +27,14 @@ def daBoasVidas
     puts "Qual é seu nome? "
     nome = gets.strip
     puts "\n\n\n\n\n"
-    puts " começaremos o jogo para você " + nome.to_s
+    puts " começaremos o jogo para você #{nome}"
     nome.to_s
 end
 
 def escolhePalavraSecreta
     puts "Escolhendo uma palavra secreta para você"
     palavraSecreta = "programador"
-    puts "A palavra secreta com " + palavraSecreta.size.to_s + " letra... Boa Sorte!"
+    puts "A palavra secreta com #{palavraSecreta.size} letra... Boa Sorte!"
     palavraSecreta.to_s
 end
 
@@ -46,14 +46,14 @@ end
 
 def cabecalhoDeTentativas(chutes, erros, mascara)
     puts "\n\n\n\n\n"
-    puts "A palavra Secreta é: " + mascara.to_s
-    puts "Erros até agora " + erros.to_s
-    puts "Chutes ate Agora " + chutes.to_s
+    puts "A palavra Secreta é:  #{mascara}"
+    puts "Erros até agora #{erros}"
+    puts "Chutes ate Agora #{chutes}"
 end
 
 def pedeUmChute
     puts "Entre com seu chute"
     chute = gets.strip.downcase
-    puts "Sera se você acertou? você chutou " + chute.to_s
+    puts "Sera se você acertou? você chutou  #{chute}"
     chute.to_s
 end
