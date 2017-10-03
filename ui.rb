@@ -22,6 +22,15 @@ def voceGanhou(pontosAteAgora)
     puts "Você ganhou #{pontosAteAgora} pontos."
 end
 
+def escolhendoPalavraSecreta
+    puts "Escolhendo uma palavra secreta para você"
+end
+
+def palavraEscolhida(palavraSecreta)
+    puts "A palavra secreta com #{palavraSecreta.size} letra... Boa Sorte!"
+    palavraSecreta.to_s
+end
+
 def daBoasVidas
     puts "Bem vindo ao jogo da forca"
     puts "Qual é seu nome? "
@@ -29,13 +38,6 @@ def daBoasVidas
     puts "\n\n\n\n\n"
     puts " começaremos o jogo para você #{nome}"
     nome.to_s
-end
-
-def escolhePalavraSecreta
-    puts "Escolhendo uma palavra secreta para você"
-    palavraSecreta = "programador"
-    puts "A palavra secreta com #{palavraSecreta.size} letra... Boa Sorte!"
-    palavraSecreta.to_s
 end
 
 def naoQuerJogar
