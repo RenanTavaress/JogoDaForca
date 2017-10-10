@@ -2,12 +2,12 @@ require_relative 'ui'
 
 def escolhePalavraSecreta
     escolhendoPalavraSecreta
-    texto = File.read("dicionario.txt")
-    todasAsPalavras = texto.split "\n"
+    arquivo = File.read("dicionario.txt")
+    todasAsPalavras = arquivo.split "\n"
     numeroEscolhido = rand(todasAsPalavras.size)
-    palavraSecreta = todasAsPalavras[numeroEscolhido]
-    palavraEscolhida palavraSecreta
-end
+    palavraSecreta = todasAsPalavras[numeroEscolhido].downcase
+    palavraEscolhida(palavraSecreta)
+end 
 
 def palavraMascarada(chutes, palavraSecreta, mascara)
     mascara =""

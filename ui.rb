@@ -27,7 +27,7 @@ def escolhendoPalavraSecreta
 end
 
 def palavraEscolhida(palavraSecreta)
-    puts "A palavra secreta com #{palavraSecreta.size} letra... Boa Sorte!"
+    puts "A palavra secreta com #{palavraSecreta.size} letras... Boa Sorte!"
     palavraSecreta.to_s
 end
 
